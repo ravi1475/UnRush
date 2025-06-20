@@ -1,0 +1,307 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System - Colors, Typography, Spacing */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 214 88% 27%; /* Deep Indigo #1E40AF */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 43 96% 56%; /* Amber #F59E0B */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%; /* Soft Gray #E5E7EB */
+    --input: 220 13% 91%;
+    --ring: 214 88% 27%;
+
+    --radius: 0.5rem;
+
+    /* Custom Design System Colors */
+    --deep-indigo: 214 88% 27%; /* #1E40AF */
+    --amber: 43 96% 56%; /* #F59E0B */
+    --charcoal: 0 0% 18%; /* #2D2D2D */
+    --soft-gray: 220 13% 91%; /* #E5E7EB */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    line-height: 1.5;
+  }
+
+  /* Typography System */
+  h1 {
+    @apply font-montserrat font-bold uppercase tracking-[0.05em];
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    @apply font-montserrat font-bold uppercase tracking-[0.05em];
+    font-size: 2.25rem;
+    line-height: 1.5;
+  }
+
+  h3 {
+    @apply font-montserrat font-bold uppercase tracking-[0.05em];
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
+
+  p {
+    @apply font-inter;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 650px;
+  }
+
+  .text-small {
+    @apply text-sm;
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-deep-indigo {
+    color: hsl(var(--deep-indigo));
+  }
+
+  .bg-deep-indigo {
+    background-color: hsl(var(--deep-indigo));
+  }
+
+  .border-deep-indigo {
+    border-color: hsl(var(--deep-indigo));
+  }
+
+  .ring-deep-indigo {
+    --tw-ring-color: hsl(var(--deep-indigo));
+  }
+
+  .text-amber {
+    color: hsl(var(--amber));
+  }
+
+  .bg-amber {
+    background-color: hsl(var(--amber));
+  }
+
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+
+  .border-soft-gray {
+    border-color: hsl(var(--soft-gray));
+  }
+
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .header-height {
+    height: 80px;
+  }
+
+  .hero-top-padding {
+    padding-top: 120px;
+  }
+
+  .container-max {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .center-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    @apply bg-amber text-white rounded-lg shadow-md px-6 py-3 font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-deep-indigo text-deep-indigo bg-white rounded-lg px-6 py-3 font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg;
+  }
+
+  .team-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .case-study-image {
+    border: 2px solid hsl(var(--soft-gray));
+    border-radius: 0.375rem;
+  }
+
+  .icon-service {
+    color: hsl(var(--deep-indigo));
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .section-title-spacing {
+    margin-bottom: 4rem;
+  }
+
+  .service-card-spacing {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section-spacing {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Form Styling */
+.form-container {
+  @apply center-content;
+}
+
+.form-field {
+  @apply w-full max-w-md mx-auto mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-charcoal mb-2;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 border border-soft-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-deep-indigo focus:border-transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-max {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  .team-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .hero-top-padding {
+    padding-top: 100px;
+  }
+
+  .header-height {
+    height: 70px;
+  }
+}

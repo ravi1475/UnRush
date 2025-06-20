@@ -1,0 +1,125 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  /* Layout Utilities */
+  .container-max {
+    @apply container mx-auto px-4 max-w-7xl;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title-spacing {
+    @apply mb-12 md:mb-16;
+  }
+
+  .hero-top-padding {
+    @apply pt-32 md:pt-40;
+  }
+
+  .header-height {
+    @apply h-16 md:h-20;
+  }
+
+  .center-content {
+    @apply text-center flex flex-col items-center;
+  }
+
+  .service-card-spacing {
+    @apply gap-8;
+  }
+
+  .footer-section-spacing {
+    @apply mb-8;
+  }
+
+  /* Typography */
+  .hero-title {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold font-montserrat leading-tight;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-montserrat;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl max-w-3xl;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-deep-indigo text-white hover:bg-deep-indigo/90 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-deep-indigo border-2 border-deep-indigo hover:bg-deep-indigo hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  }
+
+  /* Images */
+  .case-study-image {
+    @apply rounded-lg;
+  }
+
+  .team-photo {
+    @apply w-24 h-24 rounded-full object-cover mx-auto;
+  }
+
+  /* Icons */
+  .icon-service {
+    @apply h-10 w-10;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Font family utilities */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
