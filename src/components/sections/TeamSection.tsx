@@ -4,18 +4,18 @@ import { Card, CardContent } from "@/components/ui/card";
 const TeamSection = () => {
   const teamMembers = [
     { 
-      name: "Rakshit Patel", 
-      role: "Full-Stack Architect & Co-Founder", 
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      name: "Rakshit Ruhil", 
+      role: "Full-Stack Architect", 
+      img: "/Rakshit.png",
       bio: "Enterprise software architect with 8+ years scaling startups to millions of users",
       specialties: ["System Architecture", "React/Node.js", "Cloud Infrastructure", "Product Strategy"],
       achievements: ["Led 20+ enterprise projects", "Expert in MERN stack", "AWS Solutions Architect"],
       expertise: "Specializes in building scalable web applications and distributed systems that handle high-traffic loads. Expert in modern JavaScript frameworks, microservices architecture, and cloud-native solutions."
     },
     { 
-      name: "Abhishek Singh", 
-      role: "AI/ML Engineer & Technical Lead", 
-      img: "https://images.unsplash.com/photo-1494790108755-2616b152b55c?w=300&h=300&fit=crop&crop=face",
+      name: "Abhishek Prasad", 
+      role: "AI/ML Engineer ", 
+      img: "/Abhishek.png",
       bio: "AI/ML specialist with deep expertise in LLMs, computer vision, and intelligent automation",
       specialties: ["Machine Learning", "Deep Learning", "NLP & LLMs", "AI Strategy"],
       achievements: ["Built 15+ AI solutions", "Published AI research", "Google Cloud ML certified"],
